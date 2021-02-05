@@ -1,0 +1,28 @@
+{
+  "name": "com.unity.addressables.cn",
+  "displayName": "Addressables.CN",
+  "version": "1.17.0",
+  "unity": "2018.4",
+  "description": "相对于原版Addressables package, 新增了对通过Addressables打包的asset进行加密的功能.\n 使用手册: https://ucgbucket.unitychina.cn/AssetStreaming/AddressablesCN.pdf",
+  "keywords": [
+    "asset",
+    "resources",
+    "bundle",
+    "bundles",
+    "assetbundles"
+  ],
+  "dependencies": {
+    "com.unity.scriptablebuildpipeline": "1.15.1",
+    "com.unity.modules.assetbundle": "1.0.0",
+    "com.unity.modules.unitywebrequest": "1.0.0",
+    "com.unity.modules.unitywebrequestassetbundle": "1.0.0"
+  },
+  "repository": {
+    "url": "git@github.cds.internal.unity3d.com:justinz/Addressables.git",
+    "type": "git",
+    "revision": "5873cf9672dce6b5108bc466c6572a2af107be1e"
+  },
+  "upmCi": {
+    "footprint": "b6a6d165655b59c68310bb2e1c5d247da8eb8a50"
+  }
+}

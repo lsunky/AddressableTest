@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Prefabs
+  m_EditorClassIdentifier: 
+  m_GroupName: Prefabs
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 97bdb9c0712d1864d97b95f58c10b3b4
+  m_SerializeEntries:
+  - m_GUID: c32971b3c9158d141a3de4a36440c49b
+    m_Address: Assets/Prefabs
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 102900000, guid: c32971b3c9158d141a3de4a36440c49b, type: 3}
+    m_TargetAsset: {fileID: 102900000, guid: c32971b3c9158d141a3de4a36440c49b, type: 3}
+  - m_GUID: a7e7ed5cb9b022248ae7eeeee7466a38
+    m_Address: Assets/Prefabs/Bridge.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 3213520127672685777, guid: a7e7ed5cb9b022248ae7eeeee7466a38,
+      type: 3}
+    m_TargetAsset: {fileID: 3213520127672685777, guid: a7e7ed5cb9b022248ae7eeeee7466a38,
+      type: 3}
+  - m_GUID: 998fa2af6c34147418249da433e2d10f
+    m_Address: Assets/Prefabs/Complex.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 333293860414850904, guid: 998fa2af6c34147418249da433e2d10f,
+      type: 3}
+    m_TargetAsset: {fileID: 333293860414850904, guid: 998fa2af6c34147418249da433e2d10f,
+      type: 3}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 88a4c95064c5787448c0571c00dd2d19, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9c57b9ab3db03ec47b89c3d2a75d6b0f, type: 2}
+    - {fileID: 11400000, guid: 648451e9d345c9e4e9546990761e7ffe, type: 2}

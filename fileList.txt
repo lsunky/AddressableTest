@@ -1,0 +1,70 @@
+根目录：E:\Addressable\AddressableTest\Assets
+    文件夹：Materials
+        Purple.mat
+        Red.mat
+        文件夹：Cold
+            Blue.mat
+            Green.mat
+
+
+    文件夹：Prefabs
+        Bridge.prefab
+        Car.prefab
+        Complex.prefab
+        House.prefab
+
+    文件夹：Scenes
+        Start.unity
+        TwoScene.unity
+        UpdateScene.unity
+
+    文件夹：Scripts
+        StartSceneScript.cs
+        StartUpdateScript.cs
+
+    文件夹：Textures
+
+根目录：E:\Addressable\AddressableTest\Assets
+    文件夹：Materials
+        Purple.mat
+        Red.mat
+        文件夹：Cold
+            Blue.mat
+            Green.mat
+
+
+    文件夹：Prefabs
+        Bridge.prefab
+        Car.prefab
+        Complex.prefab
+        House.prefab
+
+    文件夹：Scenes
+        Start.unity
+        TwoScene.unity
+        UpdateScene.unity
+
+    文件夹：Textures
+
+根目录：E:\Addressable\AddressableTest\Assets
+    文件夹：Materials
+        Purple.mat
+        Red.mat
+        文件夹：Cold
+            Blue.mat
+            Green.mat
+
+
+    文件夹：Prefabs
+        Bridge.prefab
+        Car.prefab
+        Complex.prefab
+        House.prefab
+
+    文件夹：Scenes
+        Start.unity
+        TwoScene.unity
+        UpdateScene.unity
+
+    文件夹：Textures
+
