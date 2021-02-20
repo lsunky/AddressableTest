@@ -11,6 +11,7 @@ using UnityEngine.AddressableAssets;
 public class AddressableEditor
 {
     static Dictionary<string,string> assetDic = new Dictionary<string, string>();
+    static List<AddressableAssetGroup> groupAssets = new List<AddressableAssetGroup>();
     
     // [MenuItem("AddressableEditor/将选择的Group设置为可全量更新")]
     // public static void SetNonStaticContentGroup()
@@ -65,11 +66,12 @@ public class AddressableEditor
         DirectoryInfo srcDir = new DirectoryInfo(sourcePath);
         //IOHelper.GetAssetFiles(srcDir.FullName);
         assetDic.Clear();
+        groupAssets.Clear();
         CreatGroupAuto(srcDir.FullName);
          var setting = AddressableAssetSettingsDefaultObject.Settings;
         foreach (KeyValuePair<string, string> kvp in assetDic)
         {
-            //Debug.Log(kvp.Key+"  /  "+kvp.Value);
+            Debug.Log(kvp.Key+"  /  "+kvp.Value);
             var guid = AssetDatabase.AssetPathToGUID(kvp.Value);
             string str = kvp.Value;
             var groupName = str;
@@ -83,7 +85,7 @@ public class AddressableEditor
                     groupName = groupName.Substring(0, i2);
                 }
             }
-            Debug.Log(groupName);
+            //Debug.Log(groupName);
             AddressableAssetGroup group = setting.FindGroup(groupName);
             if (group == null)
             {
@@ -96,6 +98,7 @@ public class AddressableEditor
                     group = setting.CreateGroup(groupName, false, false, false,
                     new List<AddressableAssetGroupSchema> { setting.DefaultGroup.Schemas[0], setting.DefaultGroup.Schemas[1] });
                 }
+                groupAssets.Add(group);
             }
             //var assetRef = setting.CreateAssetReference(guid);
             var entry = setting.CreateOrMoveEntry(guid, group);
@@ -108,12 +111,12 @@ public class AddressableEditor
     [MenuItem("AddressableEditor/3.设置Group")]
     public static void SetStaticContentGroup()
     {
-        foreach (AddressableAssetGroup groupAsset in Selection.objects)
+        foreach (AddressableAssetGroup groupAsset in groupAssets)
         {
             for (int i = 0; i < groupAsset.Schemas.Count; i++)
             {
                 var schema = groupAsset.Schemas[i];
-                Debug.Log(schema.name);
+                //Debug.Log(schema.name);
                 
                 if (schema is UnityEditor.AddressableAssets.Settings.GroupSchemas.ContentUpdateGroupSchema)
                 {
@@ -127,7 +130,7 @@ public class AddressableEditor
                     var bundledAssetGroupSchema =
                         (schema as UnityEditor.AddressableAssets.Settings.GroupSchemas.BundledAssetGroupSchema);
                     if(schema.name == "Prefabs_BundledAssetGroupSchema"){
-                        bundledAssetGroupSchema.BundleMode = UnityEditor.AddressableAssets.Settings.GroupSchemas.BundledAssetGroupSchema.BundlePackingMode.PackSeparately;
+                        //bundledAssetGroupSchema.BundleMode = UnityEditor.AddressableAssets.Settings.GroupSchemas.BundledAssetGroupSchema.BundlePackingMode.PackSeparately;
                         bundledAssetGroupSchema.BuildPath.SetVariableByName(groupAsset.Settings,
                         AddressableAssetSettings.kRemoteBuildPath);
                         bundledAssetGroupSchema.LoadPath.SetVariableByName(groupAsset.Settings,
@@ -146,7 +149,7 @@ public class AddressableEditor
     }
     public static void CreatGroupAuto(string path)
     {
-        foreach (AddressableAssetGroup groupAsset in Selection.objects)
+        foreach (AddressableAssetGroup groupAsset in groupAssets)
         {
             for (int i = 0; i < groupAsset.Schemas.Count; i++)
             {
